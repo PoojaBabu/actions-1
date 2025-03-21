@@ -7,27 +7,34 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
-
-      - name: List and read files
-        run: |
-         echo "My first Github action job"
-         ls -lrtha
-         cat README.md
-      - name: Install 3rd party CLI:cowsay
-        run: sudo apt-get install cowsay -y
-
-      - name: Use a 3rd party CLI to Generate ASCII artwork
-        run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
         
-      - name: test file dragon.txt exists?
-        run: cat dragon.txt
-      
       - name: checkout repo files
         run: ls -lrtha
+
+      - name: Executing shell Script
+        run: .github/workflows/ascii-script.sh
+
+
+      #- name: List and read files
+        #run: |
+        # echo "My first Github action job"
+         #ls -lrtha
+         #cat README.md
+      #- name: Install 3rd party CLI:cowsay
+      #  run: sudo apt-get install cowsay -y
+
+      #- name: Use a 3rd party CLI to Generate ASCII artwork
+      #  run: cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
+        
+      #- name: test file dragon.txt exists?
+      #  run: cat dragon.txt
+      
+      #- name: checkout repo files
+      #  run: ls -lrtha
        
 
       #- name: List files
       #  run: ls
 
       #- name: READ
-       # run: cat README.md
+      # run: cat README.md
