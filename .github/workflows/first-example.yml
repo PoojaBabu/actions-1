@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v4
         
       - name: checkout repo files
-        run: ls -lrtha
+        run: ls -lrtha .github/workflows
 
       - name: Executing shell Script
         run: |
