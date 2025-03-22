@@ -19,12 +19,16 @@ jobs:
   test_job_2:
     runs-on: ubuntu-latest
     steps:
-      - name: Test
+      - name: Sleep for 10 secs
+        run: sleep 10
+    
+      - name: Test file exists
         run: grep -i "DRAGON" dragon.txt 
+
   deploy_job_3:
     runs-on: ubuntu-latest
     steps:
-      - name: Test
-        run: |
-         cat dragon.txt 
-         echo "Deploying..."
+      - name: Read file
+        run: cat dragon.txt 
+      - name: Deploy
+        run: echo "Deploying..."
