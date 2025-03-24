@@ -37,7 +37,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: dragon.txt
-           
+          path: dragon.txt  
 
   deploy_job_3:
     runs-on: ubuntu-latest
@@ -46,6 +46,7 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: dragon.txt
+        path: dragon.txt 
     - name: Read file
       run: cat dragon.txt 
     - name: Deploy
