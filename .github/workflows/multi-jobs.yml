@@ -29,12 +29,12 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: dragon.txt
-          path:  /home/runner/work/actions-1/actions-1/dragon.txt  
+            
       - name: Sleep for 10 secs
         run: sleep 10
     
       - name: Test file exists
-        run: grep -i "DRAGON"  /home/runner/work/actions-1/actions-1/dragon.txt
+        run: grep -i "DRAGON"  /dragon.txt
       
 
 
@@ -45,8 +45,8 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: dragon.txt
-        path:  /home/runner/work/actions-1/actions-1/dragon.txt 
+        
     - name: Read file
-      run: cat  /home/runner/work/actions-1/actions-1/dragon.txt 
+      run: cat  dragon.txt 
     - name: Deploy
       run: echo "Deploying..."
