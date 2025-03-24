@@ -34,7 +34,7 @@ jobs:
         run: sleep 10
     
       - name: Test file exists
-        run: grep -i "DRAGON"  /dragon.txt
+        run: grep -i "DRAGON"  dragon.txt
       
 
 
