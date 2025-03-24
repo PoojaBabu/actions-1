@@ -21,8 +21,6 @@ jobs:
             name: dragon.txt
             path:  /home/runner/work/actions-1/actions-1/dragon.txt # or path/to/artifact
       
-      - name: Sleep 30 seconds
-        run: sleep 30
 
   test_job_2:
     runs-on: ubuntu-latest
