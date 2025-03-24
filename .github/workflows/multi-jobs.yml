@@ -28,16 +28,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: build_job_1
     steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dragon.txt
+          path: dragon.txt  
       - name: Sleep for 10 secs
         run: sleep 10
     
       - name: Test file exists
         run: grep -i "DRAGON" dragon.txt 
       
-      - uses: actions/download-artifact@v4
-        with:
-          name: dragon.txt
-          path: dragon.txt  
+
 
   deploy_job_3:
     runs-on: ubuntu-latest
